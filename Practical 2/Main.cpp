@@ -20,17 +20,16 @@ public:
         cout << "\nEnter the student information:\n";
         cin.ignore();
         cout << "Name: ";
-        cin >> name;
+        getline(cin, name);
         cout << "Roll Number: ";
         cin >> rollNumber;
-        cout << "Class: ";
-        
         cin.ignore();
+        cout << "Class: ";
         getline(cin, className);
         cout << "Division: ";
         cin >> division;
-        cout << "Date of Birth: ";
         cin.ignore();
+        cout << "Date of Birth: ";
         getline(cin, dateOfBirth);
         cout << "Blood Group: ";
         getline(cin, bloodGroup);
@@ -107,7 +106,7 @@ public:
         }
         catch (const std::exception &e)
         {
-            std::cerr << e.what() << '\n';
+            cout << "Error : " << endl;
         }
     }
 };
